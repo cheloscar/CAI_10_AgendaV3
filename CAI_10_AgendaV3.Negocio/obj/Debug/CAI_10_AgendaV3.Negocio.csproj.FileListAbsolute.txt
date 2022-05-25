@@ -1,0 +1,13 @@
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Negocio\bin\Debug\CAI_10_AgendaV3.Negocio.dll
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Negocio\bin\Debug\CAI_10_AgendaV3.Negocio.pdb
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Negocio\bin\Debug\CAI_10_AgendaV3.AccesoDatos.dll
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Negocio\bin\Debug\CAI_10_AgendaV3.Entidades.dll
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Negocio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Negocio\bin\Debug\CAI_10_AgendaV3.AccesoDatos.pdb
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Negocio\bin\Debug\CAI_10_AgendaV3.Entidades.pdb
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Negocio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Negocio\obj\Debug\CAI_10_AgendaV3.Negocio.csproj.AssemblyReference.cache
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Negocio\obj\Debug\CAI_10_AgendaV3.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Negocio\obj\Debug\CAI_10_AgendaV3.Negocio.csproj.CopyComplete
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Negocio\obj\Debug\CAI_10_AgendaV3.Negocio.dll
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Negocio\obj\Debug\CAI_10_AgendaV3.Negocio.pdb

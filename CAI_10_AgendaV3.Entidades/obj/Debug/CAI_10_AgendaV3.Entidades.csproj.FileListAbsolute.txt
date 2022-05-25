@@ -1,0 +1,6 @@
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Entidades\bin\Debug\CAI_10_AgendaV3.Entidades.dll
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Entidades\bin\Debug\CAI_10_AgendaV3.Entidades.pdb
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Entidades\obj\Debug\CAI_10_AgendaV3.Entidades.csproj.AssemblyReference.cache
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Entidades\obj\Debug\CAI_10_AgendaV3.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Entidades\obj\Debug\CAI_10_AgendaV3.Entidades.dll
+C:\Users\mgarayalde\OneDrive\Facultad\PracticasCAI2022\CAI_10_AgendaV3\CAI_10_AgendaV3.Entidades\obj\Debug\CAI_10_AgendaV3.Entidades.pdb
