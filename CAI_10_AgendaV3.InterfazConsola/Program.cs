@@ -23,6 +23,7 @@ namespace CAI_10_AgendaV3.InterfazConsola
             Contacto _tempContacto;
             string _tempString;
             List<Contacto> _listaContactosTemp;
+            
 
             //Inicio del programa
             Menu.MenuBienvenida();
@@ -89,7 +90,7 @@ namespace CAI_10_AgendaV3.InterfazConsola
                         {
                             //Opción 1: Agregar una Persona
                             //Se inicializa el contacto temporal para la carga
-                            _tempContacto = new ContactoPersona("","","",0,"","", DateTime.Parse("01/01/1980"));
+                            _tempContacto = new Contacto(0,"","");
                             //Se llama al método que solicita los datos del contacto
                             _tempContacto = Interacciones.SolicitarDatosContacto(_tempContacto);
                             //Se carga el nuevo contacto
@@ -108,7 +109,7 @@ namespace CAI_10_AgendaV3.InterfazConsola
                         {
                             //Opción 2: Agregar una Empresa
                             //Se inicializa el contacto temporal para la carga
-                            _tempContacto = new ContactoEmpresa("","","",0,"", DateTime.Parse("01/01/1980"));
+                            _tempContacto = new Contacto(0, "", "");
                             //Se llama al método que solicita los datos del contacto
                             _tempContacto = Interacciones.SolicitarDatosContacto(_tempContacto);
                             //Se carga el nuevo contacto

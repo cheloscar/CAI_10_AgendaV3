@@ -63,15 +63,15 @@ namespace CAI_10_AgendaV3.InterfazConsola
                 Console.WriteLine("");
                 foreach (Contacto contacto in listaContactos)
                 {
-                    if (contacto is ContactoPersona)
+                    if (contacto is Contacto)
                     {
-                        ContactoPersona _tempContacto = (ContactoPersona)contacto;
-                        Console.WriteLine(_tempContacto.Nombre + " - " + _tempContacto.Apellido + " - " + _tempContacto.Email + " - " + _tempContacto.Telefono + " - " + _tempContacto.Direccion + " - " + _tempContacto.ID);
+                        Contacto _tempContacto = contacto;
+                        Console.WriteLine(_tempContacto.Nombre + " - " + _tempContacto.Apellido + " - " + _tempContacto.Telefono + " - " + _tempContacto.Direccion + " - " + _tempContacto.ID);
                     }
-                    else if (contacto is ContactoEmpresa)
+                    else if (contacto is Contacto)
                     {
-                        ContactoEmpresa _tempContacto = (ContactoEmpresa)contacto;
-                        Console.WriteLine(_tempContacto.RazonSocial + " - " + _tempContacto.Email + " - " + _tempContacto.Telefono + " - " + _tempContacto.Direccion + " - " + _tempContacto.ID);
+                        Contacto _tempContacto = contacto;
+                        Console.WriteLine(_tempContacto.RazonSocial + " - " + _tempContacto.Telefono + " - " + _tempContacto.Direccion + " - " + _tempContacto.ID);
 
                     }
                 }

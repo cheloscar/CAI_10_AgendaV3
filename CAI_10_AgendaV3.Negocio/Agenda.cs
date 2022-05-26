@@ -62,14 +62,14 @@ namespace CAI_10_AgendaV3.Negocio
         {
             if (_listaContactos.Count < _capacidad)
             {
-                if (contacto is ContactoPersona)
+                if (contacto is Contacto)
                 {
                     _idContactos++;
                     contacto.ActualizarID(_idContactos);
                     _listaContactos.Add(contacto);
                     return true;
                 }
-                else if (contacto is ContactoEmpresa)
+                else if (contacto is Contacto)
                 {
                     _idContactos++;
                     contacto.ActualizarID(_idContactos);
@@ -80,41 +80,7 @@ namespace CAI_10_AgendaV3.Negocio
             }
             else { return false; }
         }
-
-        /// <summary>
-        /// Método para agregar una Persona a la Agenda. Se verifica que no se exceda la Capacidad.
-        /// No devuelve error.
-        /// </summary>
-        /// <param name="contacto">Persona</param>
-        public bool AgregarContacto(ContactoPersona contacto)
-        {
-            if (_listaContactos.Count < _capacidad)
-            {
-                _idContactos++;
-                contacto.ActualizarID(_idContactos);
-                _listaContactos.Add(contacto);
-                return true;
-            }
-            else { return false; }
-        }
-
-        /// <summary>
-        /// Método para agregar una Empresa a la Agenda. Se verifica que no se exceda la Capacidad.
-        /// No devuelve error.
-        /// </summary>
-        /// <param name="contacto">Empresa</param>
-        public bool AgregarContacto(ContactoEmpresa contacto)
-        {
-            if (_listaContactos.Count < _capacidad)
-            {
-                
-                _idContactos++;
-                contacto.ActualizarID(_idContactos);
-                _listaContactos.Add(contacto);
-                return true; 
-            }
-            else { return false; }
-        }
+       
 
         /// <summary>
         /// Se busca el "texto" en los campos Nombre, Apellido, Email, Teléfono y Dirección.
@@ -129,27 +95,27 @@ namespace CAI_10_AgendaV3.Negocio
 
             if (texto == "TODOS")
             {
-                resultados = AgendaDatos.Traer(860540);
+                resultados = AgendaDatos.TraerTodos();
             }
             else
             {
                 foreach (Contacto contacto in _listaContactos)
                 {
                     
-                    if (contacto is ContactoPersona)
+                    if (contacto is Contacto)
                     {
-                        ContactoPersona _tempContacto = (ContactoPersona)contacto;
+                        Contacto _tempContacto = contacto;
                         if (_tempContacto.Nombre.Contains(texto)) { resultados.Add(_tempContacto); }
                         else if (_tempContacto.Apellido.Contains(texto)) { resultados.Add(_tempContacto); }
-                        else if (_tempContacto.Email.Contains(texto)) { resultados.Add(_tempContacto); }
+                        
                         else if (_tempContacto.Telefono.Contains(texto)) { resultados.Add(_tempContacto); }
                         else if (_tempContacto.Direccion.Contains(texto)) { resultados.Add(_tempContacto); }
                     }
-                    else if (contacto is ContactoEmpresa)
+                    else if (contacto is Contacto)
                     {
-                        ContactoEmpresa _tempContacto = (ContactoEmpresa)contacto;
+                        Contacto _tempContacto = contacto;
                         if (_tempContacto.RazonSocial.Contains(texto)) { resultados.Add(_tempContacto); }
-                        else if (_tempContacto.Email.Contains(texto)) { resultados.Add(_tempContacto); }
+                        
                         else if (_tempContacto.Telefono.Contains(texto)) { resultados.Add(_tempContacto); }
                         else if (_tempContacto.Direccion.Contains(texto)) { resultados.Add(_tempContacto); }
                     }
@@ -176,12 +142,12 @@ namespace CAI_10_AgendaV3.Negocio
                 if (contacto.ID == contactoNew.ID)
                 {
                     int indice = _listaContactos.FindIndex(elemento => elemento.ID == contactoNew.ID);
-                    if (contacto is ContactoPersona)
+                    if (contacto is Contacto)
                     {
                         _listaContactos[indice] = contactoNew;
                         return true;
                     }
-                    else if (contacto is ContactoEmpresa)
+                    else if (contacto is Contacto)
                     {
                         _listaContactos[indice] = contactoNew;
                         return true;

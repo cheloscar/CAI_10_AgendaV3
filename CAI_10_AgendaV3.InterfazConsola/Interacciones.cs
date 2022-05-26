@@ -15,8 +15,8 @@ namespace CAI_10_AgendaV3.InterfazConsola
         public static Contacto SolicitarDatosContacto(Contacto contacto)
         {
             bool _continuar;
-            ContactoPersona _tempContactoPersona = new ContactoPersona("", "", "", 0, "", "", DateTime.Parse("01/01/1980"));
-            ContactoEmpresa _tempContactoEmpresa;
+            Contacto _tempContactoPersona = new Contacto(0, "", "");
+            Contacto _tempContactoEmpresa;
             DateTime _tempDT;
 
             Console.Clear();
@@ -24,13 +24,13 @@ namespace CAI_10_AgendaV3.InterfazConsola
 
             //Se evalúa el tipo de contacto que se cargará
 
-            if (contacto is ContactoPersona)
+            if (contacto is Contacto)
             {
                 #region Carga de datos Persona
 
                 //Se cargan todoslos datos de un contacto del tipo Persona.
 
-                _tempContactoPersona = (ContactoPersona)contacto;
+                _tempContactoPersona = contacto;
 
                 //Solicitud de nombre
 
@@ -60,23 +60,6 @@ namespace CAI_10_AgendaV3.InterfazConsola
                     {
                         _continuar = false;
 
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ha ingresado un valor incorrecto, intente de nuevo.");
-                        _continuar = true;
-                    }
-                } while (_continuar);
-
-                //solicitud de email
-                do
-                {
-                    Console.WriteLine("Email:");
-                    _tempContactoPersona.ActualizarEmail(Console.ReadLine());
-                    //Se valida que el campo no esté vacío y que tenga un @
-                    if (_tempContactoPersona.Email != "" && _tempContactoPersona.Email.Contains("@"))
-                    {
-                        _continuar = false;
                     }
                     else
                     {
@@ -168,13 +151,13 @@ namespace CAI_10_AgendaV3.InterfazConsola
 
                 #endregion
             }
-            else if (contacto is ContactoEmpresa)
+            else if (contacto is Contacto)
             {
                 #region Carga de datps Empresa
 
                 //Se cargan todoslos datos de un contacto del tipo Empresa.
 
-                _tempContactoEmpresa = (ContactoEmpresa)contacto;
+                _tempContactoEmpresa = contacto;
 
                 //Solicitud de razón social
 
@@ -184,23 +167,6 @@ namespace CAI_10_AgendaV3.InterfazConsola
                     _tempContactoEmpresa.ActualizarRazonSocial(Console.ReadLine());
                     //Se valida que el campo no esté vacío. Se aceptan espacios
                     if (_tempContactoEmpresa.RazonSocial != "")
-                    {
-                        _continuar = false;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ha ingresado un valor incorrecto, intente de nuevo.");
-                        _continuar = true;
-                    }
-                } while (_continuar);
-
-                //solicitud de email
-                do
-                {
-                    Console.WriteLine("Email:");
-                    _tempContactoEmpresa.ActualizarEmail(Console.ReadLine());
-                    //Se valida que el campo no esté vacío y que tenga un @
-                    if (_tempContactoEmpresa.Email != "" && _tempContactoEmpresa.Email.Contains("@"))
                     {
                         _continuar = false;
                     }
@@ -369,9 +335,9 @@ namespace CAI_10_AgendaV3.InterfazConsola
 
             #region Editar Contacto Persona
 
-            if (contacto is ContactoPersona)
+            if (contacto is Contacto)
             {
-                ContactoPersona _tempContacto = (ContactoPersona)contacto;
+                Contacto _tempContacto = contacto;
 
                 //Modificación opcional del nombre
                 Console.WriteLine("¿Desea modificar el nombre?");
@@ -409,29 +375,6 @@ namespace CAI_10_AgendaV3.InterfazConsola
                         if (_tempString != "" && Validadores.ValidarSoloTexto(_tempContacto.Apellido))
                         {
                             _tempContacto.ActualizarApellido(_tempString);
-                            _continuar = false;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Ha ingresado un valor incorrecto, intente de nuevo.");
-                            _continuar = true;
-                        }
-                    } while (_continuar);
-                }
-
-                //Modificación opcional del email
-                Console.WriteLine("¿Desea modificar el email?");
-                Console.WriteLine("Valor actual: " + _tempContacto.Email);
-                if (Menu.DeseaContinuar())
-                {
-                    do
-                    {
-                        Console.WriteLine("Email:");
-                        _tempString = Console.ReadLine();
-                        //Se valida que el campo no esté vacío y que tenga un @
-                        if (_tempString != "" && _tempString.Contains("@"))
-                        {
-                            _tempContacto.ActualizarEmail(_tempString);
                             _continuar = false;
                         }
                         else
@@ -521,9 +464,9 @@ namespace CAI_10_AgendaV3.InterfazConsola
 
             #region Editar Contacto Empresa
 
-            else if (contacto is ContactoEmpresa)
+            else if (contacto is Contacto)
             {
-                ContactoEmpresa _tempContacto = (ContactoEmpresa)contacto;
+                Contacto _tempContacto = contacto;
 
                 //Modificación opcional de la Razón Social
                 Console.WriteLine("¿Desea modificar la Razón Social?");
@@ -538,29 +481,6 @@ namespace CAI_10_AgendaV3.InterfazConsola
                         if (_tempString != "")
                         {
                             _tempContacto.ActualizarRazonSocial(_tempString);
-                            _continuar = false;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Ha ingresado un valor incorrecto, intente de nuevo.");
-                            _continuar = true;
-                        }
-                    } while (_continuar);
-                }
-
-                //Modificación opcional del email
-                Console.WriteLine("¿Desea modificar el email?");
-                Console.WriteLine("Valor actual: " + _tempContacto.Email);
-                if (Menu.DeseaContinuar())
-                {
-                    do
-                    {
-                        Console.WriteLine("Email:");
-                        _tempString = Console.ReadLine();
-                        //Se valida que el campo no esté vacío y que tenga un @
-                        if (_tempString != "" && _tempString.Contains("@"))
-                        {
-                            _tempContacto.ActualizarEmail(_tempString);
                             _continuar = false;
                         }
                         else

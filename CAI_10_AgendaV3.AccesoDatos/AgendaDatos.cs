@@ -75,18 +75,16 @@ namespace CAI_10_AgendaV3.AccesoDatos
             n.Add("id", contacto.ID.ToString());
             n.Add("Direccion", contacto.Direccion);
             n.Add("Telefono", contacto.Telefono);
-            n.Add("Email", contacto.Email);
-
-            if (contacto is ContactoPersona)
+            if (contacto is Contacto)
             {
-                ContactoPersona contactoPersona = (ContactoPersona)contacto;
+                Contacto contactoPersona = contacto;
                 n.Add("Nombre", contactoPersona.Nombre);
                 n.Add("Apellido", contactoPersona.Apellido);
                 n.Add("FechaNacimiento", contactoPersona.FechaNacimiento.ToString("yyyy-MM-dd"));
             }
             else
             {
-                ContactoEmpresa contactoEmpresa = (ContactoEmpresa)contacto;
+                Contacto contactoEmpresa = contacto;
                 n.Add("FechaConstitucion", contactoEmpresa.FechaConstitucion.ToString("yyy-MM-dd"));
                 n.Add("RazonSocial", contactoEmpresa.RazonSocial);
             }
